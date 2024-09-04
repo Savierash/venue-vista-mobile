@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp">
+
+    <!-- FrameLayout without layout_weight -->
+    <FrameLayout
+        android:layout_width="380dp"
+        android:layout_height="800dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/welcome_rounded_corner">
+
+        <!-- Welcome Text inside FrameLayout -->
+
+        <FrameLayout
+            android:layout_width="340dp"
+            android:layout_height="760dp"
+            android:layout_gravity="center"
+            android:background="@drawable/welcome_rounded_corner2">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_condensed"
+                android:text="Welcome\n      to"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="400dp"
+                android:fontFamily="@font/bree_serif"
+                android:gravity="center"
+                android:text="VenueVista"
+                android:textColor="@color/black"
+                android:textSize="38sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="450dp"
+                android:fontFamily="@font/roboto_condensed"
+                android:gravity="center"
+                android:text="MAKE YOUR BOOKING EASY"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VenueVista" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/blue</item> <!-- Color for primary actions (e.g., Login) -->
+        <item name="colorButtonNormal">@color/lightblue</item> <!-- Default button background -->
+        <item name="colorSecondary">@color/black</item> <!-- Color for secondary actions (e.g., Sign Up) -->
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="buttonIconTint">@color/lighterblue</item> <!-- Tint for icons on buttons -->
+    </style>
+
+    <style name="Theme.VenueVista" parent="Base.Theme.VenueVista" />
+</resources>

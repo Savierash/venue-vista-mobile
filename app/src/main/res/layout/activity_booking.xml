@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Fixed Top Toolbar -->
+    <Toolbar
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblue"/>
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="Back"
+        android:background="@drawable/baseline_arrow_back_ios_24"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="160dp"
+        android:fontFamily="@font/bree_serif"
+
+        android:text="Bookings"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <!-- Fixed Bottom Toolbar -->
+    <FrameLayout
+        android:layout_width="380dp"
+        android:layout_height="520dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/booking_rounded">
+
+        <ImageView
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:background="@color/white"
+            android:src="@drawable/baseline_calendar_today_24" />
+
+
+        <FrameLayout
+            android:id="@+id/rectangle1"
+            android:layout_width="310dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/welcome_rounded_corner2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="110dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="5dp"
+            android:text="Garden"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/roboto_flex"
+            android:padding="2dp"
+            android:text="Garden - this spot is good for a family / \nbarkada’s."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="275dp"
+            android:layout_marginTop="115dp"
+            android:background="@color/lightblue4"
+            android:src="@drawable/baseline_pending_actions_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="115dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Pending"
+            android:textColor="@color/black" />
+
+        <FrameLayout
+            android:id="@+id/rectangle2"
+            android:layout_width="310dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="220dp"
+            android:background="@drawable/welcome_rounded_corner2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="220dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="5dp"
+            android:text="Package C"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="250dp"
+            android:fontFamily="@font/roboto_flex"
+            android:padding="2dp"
+            android:text="Poolside - for this place, it can \naccommodate a maximum of 100 pax."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="223dp"
+            android:background="@color/lightblue4"
+            android:src="@drawable/baseline_check_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="225dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Complete"
+            android:textColor="@color/black" />
+
+        <FrameLayout
+            android:layout_width="310dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="330dp"
+            android:background="@drawable/welcome_rounded_corner2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="330dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="5dp"
+            android:text="Package A"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="360dp"
+            android:fontFamily="@font/roboto_flex"
+            android:padding="2dp"
+            android:text="Pavilion - it can accommodate up to 20 \npax."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/complete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="330dp"
+            android:background="@color/lightblue4"
+            android:src="@drawable/baseline_check_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="333dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Complete"
+            android:textColor="@color/black" />
+    </FrameLayout>
+
+    <Toolbar
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightblue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/baseline_account_circle_24"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/baseline_home_24"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageButton
+            android:id="@+id/calendar_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/baseline_calendar_month_24"
+            android:clickable="true"
+            android:focusable="true"/>
+    </Toolbar>
+
+
+</RelativeLayout>

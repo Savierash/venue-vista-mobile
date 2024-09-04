@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Logo TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bree_serif"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="VenueVista"
+        android:textSize="32sp"
+        android:textColor="@color/black"/>
+
+    <!-- Empty top half -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3" />
+
+    <!-- Bottom half -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/login_rounded_corner">
+
+        <!-- Text inside the rounded half screen -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Sign up"
+            android:textColor="@color/lightblue4"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Username"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/signup_username"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/rounded_corner2"
+            android:fontFamily="@font/roboto_condensed"
+            android:hint="Username"
+            android:padding="10dp"
+            android:textColorHint="@color/grey"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/rounded_corner2"
+            android:fontFamily="@font/roboto_condensed"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="215dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="280dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:padding="5dp"
+            android:text="At least 8 characters"
+            android:textColor="@color/Red"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="235dp"
+            android:background="@drawable/rounded_corner2"
+            android:fontFamily="@font/roboto_condensed"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/toggle_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="245dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_visibility_off_24" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="300dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Confirm Password"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+        <EditText
+            android:id="@+id/signup_confirm_password"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/rounded_corner2"
+            android:fontFamily="@font/roboto_condensed"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/toggle_confirm_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="330dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_visibility_off_24" />
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:padding="1dp"
+            android:text="Signup"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:backgroundTint="@color/lighterblue"
+            android:elevation="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- For bold letter -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="170dp"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/login_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

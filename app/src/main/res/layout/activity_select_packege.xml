@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/baseline_arrow_back_ios_24"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_slab"
+                android:text="Package A"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <!--boxes1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box1"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/home_discover"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="20dp">
+
+            <!--CONTENT inside the box of image and textview-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--image inside the cardview-->
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="108dp"
+
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:contentDescription="OUTING"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/outing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_condensed"
+                    android:gravity="center"
+                    android:text="OUTING"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Empty top half -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" /> <!-- Empty top half -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_screen">
+
+            <!-- Text inside the rounded half screen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/bree_serif"
+                android:text="PAVILION"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Event type:\n Birthday ( Debut ), Wedding, Anniversary, Outing, Day Out "
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bree_serif"
+                    android:padding="16dp"
+                    android:background="@color/white"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Number of guests:\n 0 ~ 100  guests\n 5 ~ 30  tables ?"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bree_serif"
+                    android:padding="16dp"
+                    android:background="@color/white"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Speaker:\n Sound System w/out "
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bree_serif"
+                    android:padding="16dp"
+                    android:background="@color/white"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="340dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="MC:\n Yes No "
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bree_serif"
+                    android:padding="16dp"
+                    android:background="@color/white"/>
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp">
+
+            <!-- Other views like TextView or CardView go here -->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/lightblue3"
+                android:fontFamily="@font/bree_serif"
+                android:text="Book Now"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:elevation="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

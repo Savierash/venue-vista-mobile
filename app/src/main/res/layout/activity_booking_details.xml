@@ -34,7 +34,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ex: birthday"
+        android:hint="Choose birthday"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/black">
 
@@ -68,16 +68,21 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter venue"
-        app:hintTextColor="@color/black">
+        android:hint="Choose Venue"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etVenue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@drawable/white_rounded_corner"
+            android:padding="16dp"
+            android:drawableEnd="@drawable/baseline_expand_more_24"
+            android:importantForAccessibility="yes" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Customization -->

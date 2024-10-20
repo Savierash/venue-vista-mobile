@@ -30,25 +30,31 @@
 
 
 
-        <!-- Venue Selection -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Occasions"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:textColor="@color/black"/>
+    <!-- Event type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Type"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black"/>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex:birthday"
+        app:hintTextColor="@color/black">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEventType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/white_rounded_corner"
-            android:padding="15dp"
-            android:hint="ex: Birthday"
-            android:textColorHint="@color/grey"/>
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:background="@drawable/white_rounded_corner" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 

@@ -7,12 +7,11 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.ImageButton;
-import android.app.AlertDialog;
 import android.widget.Toast;
+import android.app.AlertDialog;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,8 +20,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class BookingDetailsActivity extends AppCompatActivity {
 
-    private Spinner spinnerEventType; // Changed from TextInputEditText to Spinner
-    private TextInputEditText etVenue, etCustomization, etDetails, etDate, etVisitors;
+    private TextInputEditText etEventType, etVenue, etCustomization, etDetails, etDate, etVisitors;
     private TextView tvNoChoices, tvTotalPrice;
     private Button btnCalculatePrice, btnConfirm;
     private LinearLayout layoutPriceCalculation;
@@ -30,10 +28,10 @@ public class BookingDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booking_details); // Ensure this matches your layout file name
+        setContentView(R.layout.activity_booking_details);
 
         // Initialize views
-        spinnerEventType = findViewById(R.id.spinnerEventType); // Use Spinner
+        etEventType = findViewById(R.id.etEventType);
         etVenue = findViewById(R.id.etVenue);
         etCustomization = findViewById(R.id.etCustomization);
         etDetails = findViewById(R.id.etDetails);
@@ -45,20 +43,9 @@ public class BookingDetailsActivity extends AppCompatActivity {
         layoutPriceCalculation = findViewById(R.id.layoutPriceCalculation);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
 
-        ImageButton btnShowDropdown = findViewById(R.id.btnShowDropdown);
-        Spinner spinnerEventType = findViewById(R.id.spinnerEventType);
-
-        btnShowDropdown.setOnClickListener(v -> {
-            spinnerEventType.performClick(); // Programmatically open the dropdown
-        });
-
-
-
-        // Set up the spinner
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.event_types, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerEventType.setAdapter(adapter);
+        // Set up the back button
+        ImageView backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(view -> finish());
 
         // TextWatcher for Additional Details
         etDetails.addTextChangedListener(new TextWatcher() {
@@ -83,9 +70,10 @@ public class BookingDetailsActivity extends AppCompatActivity {
             }
         });
 
+        // Confirm button logic
         btnConfirm.setOnClickListener(v -> {
             // Handle the confirmation logic here
-            String eventType = spinnerEventType.getSelectedItem().toString(); // Get selected item from Spinner
+            String eventType = etEventType.getText().toString();
             String venue = etVenue.getText().toString();
             String customization = etCustomization.getText().toString();
             String additionalDetails = etDetails.getText().toString();
@@ -110,7 +98,7 @@ public class BookingDetailsActivity extends AppCompatActivity {
                         // Navigate to BookingCompleteActivity
                         Intent intent = new Intent(BookingDetailsActivity.this, CompleteActivity.class);
                         startActivity(intent);
-                        finish(); // Optionally finish this activity
+                        finish();
                     })
                     .setNegativeButton("Cancel", null)
                     .show();
@@ -121,16 +109,20 @@ public class BookingDetailsActivity extends AppCompatActivity {
     }
 
     private void calculatePrice() {
-        // Example price calculation logic
         String visitorsText = etVisitors.getText().toString();
         if (!visitorsText.isEmpty()) {
-            int numberOfVisitors = Integer.parseInt(visitorsText);
-            double pricePerVisitor = 500.0; // Example price per visitor in PHP
-            double totalPrice = numberOfVisitors * pricePerVisitor;
+            try {
+                int numberOfVisitors = Integer.parseInt(visitorsText);
+                double pricePerVisitor = 500.0; // Example price per visitor in PHP
+                double totalPrice = numberOfVisitors * pricePerVisitor;
 
-            // Display the total price in Philippine Pesos
-            tvTotalPrice.setText("Total Amount: ₱" + String.format("%.2f", totalPrice));
-            layoutPriceCalculation.setVisibility(View.VISIBLE);
+                // Display the total price in Philippine Pesos
+                tvTotalPrice.setText("Total Amount: ₱" + String.format("%.2f", totalPrice));
+                layoutPriceCalculation.setVisibility(View.VISIBLE);
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Please enter a valid number of visitors", Toast.LENGTH_SHORT).show();
+                layoutPriceCalculation.setVisibility(View.GONE);
+            }
         } else {
             tvTotalPrice.setText("Total Amount: ₱0.00");
             layoutPriceCalculation.setVisibility(View.GONE);

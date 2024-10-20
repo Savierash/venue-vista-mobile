@@ -29,6 +29,13 @@
         <activity android:name=".SelectPackageActivity"/>
         <activity android:name=".BookingActivity"/>
         <activity android:name=".MainProfileActivity"/>
+        <activity android:name=".SelectPackage2Activity"/>
+        <activity android:name=".SelectPackage3Activity"/>
+        <activity android:name=".SelectPackage4Activity"/>
+        <activity android:name=".SelectPackage5Activity"/>
+        <activity android:name=".SelectPackage6Activity"/>
+        <activity android:name=".CompleteActivity"/>
+        <activity android:name=".BookingDetailsActivity"/>
 
     </application>
 

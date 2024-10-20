@@ -22,20 +22,13 @@ public class BookingActivity extends AppCompatActivity {
         homeIcon = findViewById(R.id.home_icon);
         calendarIcon = findViewById(R.id.calendar_icon);
 
-        ImageView backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();  // Closes the current activity and returns to the previous one
-            }
-        });
-
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Handle profile button click
                 Intent intent = new Intent(BookingActivity.this, MainProfileActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -45,6 +38,7 @@ public class BookingActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(BookingActivity.this,HomeActivity.class);
                 startActivity(intent);
+
             }
         });
 

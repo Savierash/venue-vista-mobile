@@ -14,292 +14,33 @@
         android:layout_height="wrap_content"
         android:background="@color/lightblue"/>
 
-    <ScrollView
-        android:id="@+id/scroll_view"
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_below="@id/top_toolbar"
-        android:layout_above="@id/bottom_toolbar">
+        android:background="@drawable/rounded_corner2"
+        android:drawableEnd="@drawable/baseline_search_24"
+        android:hint="Booking Venue"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <!-- RecyclerView for displaying venues -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/venues_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:layout_above="@id/bottom_toolbar"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="true"
+        android:background="@android:color/holo_blue_light"/> <!-- Temporary background for testing -->
 
-
-            <TextView
-                android:id="@+id/home_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="16dp"
-                android:text="Discover"
-                android:textSize="15sp"
-                android:fontFamily="@font/righteous_regular"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/home_discover"
-                android:textColor="@color/lightblue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/home_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="16dp"
-                android:text="Available Spaces"
-                android:textSize="15sp"
-                android:fontFamily="@font/righteous_regular"/>
-
-
-            <!--boxes1-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/box1"
-                android:layout_width="350dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/home_discover"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="@color/grey"
-                app:cardCornerRadius="20dp"
-                android:layout_centerInParent="true">
-
-                <!--CONTENT inside the box of image and textview-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <!--image inside the cardview-->
-                    <ImageView
-                        android:id="@+id/image1"
-                        android:layout_width="match_parent"
-                        android:layout_height="108dp"
-                        android:layout_gravity="center"
-                        android:clickable="true"
-                        android:contentDescription="OUTING"
-                        android:focusable="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/outing" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bree_serif"
-                        android:text="PAVILION"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-
-            <!--box2-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/box2"
-                android:layout_width="350dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/box1"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="@color/grey"
-                app:cardCornerRadius="20dp"
-                android:layout_centerInParent="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image2"
-                        android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="OUTING"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bday"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bree_serif"
-                        android:text="POOLSIDE"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--box3-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/box3"
-                android:layout_width="350dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/box2"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="@color/grey"
-                app:cardCornerRadius="20dp"
-                android:layout_centerInParent="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@color/blue">
-
-                    <ImageView
-                        android:id="@+id/image3"
-                        android:layout_width="match_parent"
-                        android:layout_height="108dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="OUTING"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/wedding"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bree_serif"
-                        android:text="POOLSIDE"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--box4-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/box4"
-                android:layout_width="350dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/box3"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="@color/grey"
-                app:cardCornerRadius="20dp"
-                android:layout_centerInParent="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@color/blue">
-
-                    <ImageView
-                        android:id="@+id/image4"
-                        android:layout_width="match_parent"
-                        android:layout_height="108dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="OUTING"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/anniversaries"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bree_serif"
-                        android:text="Garden"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--box5-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/box5"
-                android:layout_width="350dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/box4"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="@color/grey"
-                app:cardCornerRadius="20dp"
-                android:layout_centerInParent="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@color/blue">
-
-                    <ImageView
-                        android:id="@+id/image5"
-                        android:layout_width="match_parent"
-                        android:layout_height="108dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="OUTING"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/farewell_party"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bree_serif"
-                        android:text="Cottage"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--box6-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/box6"
-                android:layout_width="350dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/box5"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="@color/grey"
-                app:cardCornerRadius="20dp"
-                android:layout_centerInParent="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image6"
-                        android:layout_width="match_parent"
-                        android:layout_height="108dp"
-                        android:layout_gravity="center"
-                        android:clickable="true"
-                        android:contentDescription="OUTING"
-                        android:focusable="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/monthsaries" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bree_serif"
-                        android:text="Center"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/box6" />
-
-        </RelativeLayout>
-    </ScrollView>
 
     <!-- Fixed Bottom Toolbar -->
     <Toolbar
@@ -310,49 +51,28 @@
         android:background="@color/lightblue"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-
-
         <ImageButton
             android:id="@+id/profile_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/lightblue"
             android:layout_marginLeft="70dp"
-            android:src="@drawable/baseline_account_circle_24" />
+            android:background="@color/lightblue"
+            android:src="@drawable/baseline_account_circle_24" /> <!-- Profile icon -->
 
         <ImageButton
             android:id="@+id/home_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/lightblue"
             android:layout_marginLeft="70dp"
-            android:src="@drawable/baseline_home_24"/>
+            android:background="@color/lightblue"
+            android:src="@drawable/baseline_home_24" /> <!-- Home icon -->
 
         <ImageButton
             android:id="@+id/calendar_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/lightblue"
             android:layout_marginLeft="70dp"
-            android:src="@drawable/baseline_calendar_month_24"/>
-
-
+            android:background="@color/lightblue"
+            android:src="@drawable/baseline_calendar_month_24"/> <!-- Calendar icon -->
     </Toolbar>
-
-    <!-- Search Bar -->
-    <EditText
-        android:id="@+id/search_bar"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/rounded_corner2"
-        android:drawableEnd="@drawable/baseline_search_24"
-        android:hint="Booking Venue"
-        android:inputType="text"
-        android:padding="9dp"
-        android:textColorHint="@color/grey"
-        android:textColor="@color/black"
-        android:clickable="true"
-        android:focusable="true"/>
 </RelativeLayout>

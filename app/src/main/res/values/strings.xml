@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VenueVista</string>
+    <string name="venue_image_desc">Venue Image</string>
 </resources>

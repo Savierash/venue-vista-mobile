@@ -43,9 +43,6 @@ public class BookingDetailsActivity extends AppCompatActivity {
         layoutPriceCalculation = findViewById(R.id.layoutPriceCalculation);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
 
-        // Set up the back button
-        ImageView backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(view -> finish());
 
         // TextWatcher for Additional Details
         etDetails.addTextChangedListener(new TextWatcher() {

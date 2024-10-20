@@ -29,19 +29,13 @@ public class MainProfileActivity extends AppCompatActivity {
         box3 = findViewById(R.id.box3);
 
 
-        ImageView backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();  // Closes the current activity and returns to the previous one
-            }
-        });
 
         proceedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainProfileActivity.this,ProfileActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -51,6 +45,7 @@ public class MainProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainProfileActivity.this,HomeActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -59,6 +54,7 @@ public class MainProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainProfileActivity.this,BookingActivity.class);
                 startActivity(intent);
+
             }
         });
 

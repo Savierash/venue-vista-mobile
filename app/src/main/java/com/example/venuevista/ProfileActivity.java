@@ -57,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://yourdomain.com/") // Replace with your actual base URL
+                .baseUrl("http://10.0.2.2/") // Replace with your actual base URL
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

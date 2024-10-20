@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">VenueVista</string>
+
+
+
+    <string-array name="event_types">
+        <item>Birthday</item>
+        <item>Wedding</item>
+        <item>Anniversary</item>
+        <item>Meeting</item>
+        <item>Conference</item>
+    </string-array>
 </resources>

@@ -93,17 +93,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/grey" />
 
-        <TextView
-            android:id="@+id/forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="250dp"
-            android:fontFamily="@font/roboto_condensed"
-            android:padding="5dp"
-            android:text="At least 8 characters"
-            android:textColor="@color/Red"
-            android:textSize="13sp" />
+
 
         <ImageView
             android:id="@+id/toggle_password"

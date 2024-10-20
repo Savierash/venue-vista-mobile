@@ -11,6 +11,10 @@
     <color name="lightblue3">#73C2FB</color>
     <color name="lightblue4">#D0ECF8</color>
     <color name="lightblue5">#54b2d1</color>
+    <color name="buttonHighlight">#FFDDDDDD</color> <!-- Highlight Color -->
+    <color name="buttonDefault">#FF6200EE</color> <!-- Default Color -->
+
+
 
 
 

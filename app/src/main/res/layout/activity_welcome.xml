@@ -24,7 +24,8 @@
                 android:id="@+id/welcome_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginTop="300dp"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto_condensed"
                 android:text="Welcome\n      to"
                 android:textColor="@color/black"
@@ -33,22 +34,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="350dp"
                 android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="VenueVista"
                 android:textColor="@color/black"
-                android:textSize="38sp" />
+                android:textSize="40sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="405dp"
                 android:fontFamily="@font/roboto_condensed"
                 android:gravity="center"
                 android:text="MAKE YOUR BOOKING EASY"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
         </FrameLayout>
     </FrameLayout>

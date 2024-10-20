@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                Intent intent = new Intent(HomeActivity.this,SelectPackage2Activity.class);
                 startActivity(intent);
             }
         });
@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                Intent intent = new Intent(HomeActivity.this,SelectPackage3Activity.class);
                 startActivity(intent);
             }
         });
@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                Intent intent = new Intent(HomeActivity.this,SelectPackage4Activity.class);
                 startActivity(intent);
             }
         });
@@ -80,7 +80,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                Intent intent = new Intent(HomeActivity.this,SelectPackage5Activity.class);
                 startActivity(intent);
             }
         });
@@ -89,18 +89,11 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                Intent intent = new Intent(HomeActivity.this,SelectPackage6Activity.class);
                 startActivity(intent);
             }
         });
 
-        searchBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +101,8 @@ public class HomeActivity extends AppCompatActivity {
                 // Handle profile button click
                 Intent intent = new Intent(HomeActivity.this, MainProfileActivity.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 
@@ -117,6 +112,8 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this,BookingActivity.class);
                 startActivity(intent);
+                finish();
+
             }
         });
     }

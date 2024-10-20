@@ -102,17 +102,6 @@
             android:textColor="@color/black"
             android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="280dp"
-            android:fontFamily="@font/roboto_condensed"
-            android:padding="5dp"
-            android:text="At least 8 characters"
-            android:textColor="@color/Red"
-            android:textSize="12sp" />
 
         <EditText
             android:id="@+id/signup_password"

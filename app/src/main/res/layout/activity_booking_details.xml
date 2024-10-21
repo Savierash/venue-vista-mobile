@@ -175,12 +175,11 @@
         app:hintTextColor="@color/black">
 
         <!-- Date Selection -->
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etVisitors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="date"
             android:textColor="@color/black"
             android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>

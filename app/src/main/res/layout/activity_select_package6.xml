@@ -67,7 +67,7 @@
                     android:contentDescription="OUTING"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/monthsaries" />
+                    android:src="@drawable/center" />
 
                 <TextView
                     android:layout_width="wrap_content"

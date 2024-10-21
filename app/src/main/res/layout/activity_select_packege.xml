@@ -67,7 +67,7 @@
                     android:contentDescription="OUTING"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/outing" />
+                    android:src="@drawable/pavilion" />
 
                 <TextView
                     android:layout_width="wrap_content"

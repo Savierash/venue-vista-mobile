@@ -80,7 +80,7 @@
                         android:contentDescription="OUTING"
                         android:focusable="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/outing" />
+                        android:src="@drawable/pavilion" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
                         android:layout_gravity="center"
                         android:contentDescription="OUTING"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/bday"
+                        android:src="@drawable/poolside"
                         android:clickable="true"
                         android:focusable="true"/>
 
@@ -159,7 +159,7 @@
                         android:layout_gravity="center"
                         android:contentDescription="OUTING"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/wedding"
+                        android:src="@drawable/beachside"
                         android:clickable="true"
                         android:focusable="true"/>
 
@@ -167,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bree_serif"
-                        android:text="POOLSIDE"
+                        android:text="BEACHSIDE"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -199,7 +199,7 @@
                         android:layout_gravity="center"
                         android:contentDescription="OUTING"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/anniversaries"
+                        android:src="@drawable/garden"
                         android:clickable="true"
                         android:focusable="true"/>
 
@@ -239,7 +239,7 @@
                         android:layout_gravity="center"
                         android:contentDescription="OUTING"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/farewell_party"
+                        android:src="@drawable/cottage"
                         android:clickable="true"
                         android:focusable="true"/>
 
@@ -281,7 +281,7 @@
                         android:contentDescription="OUTING"
                         android:focusable="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/monthsaries" />
+                        android:src="@drawable/center" />
 
                     <TextView
                         android:layout_width="wrap_content"

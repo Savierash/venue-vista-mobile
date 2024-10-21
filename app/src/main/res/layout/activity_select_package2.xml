@@ -67,7 +67,7 @@
                     android:contentDescription="OUTING"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bday" />
+                    android:src="@drawable/poolside"/>
 
                 <TextView
                     android:layout_width="wrap_content"

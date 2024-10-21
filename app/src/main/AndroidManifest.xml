@@ -36,6 +36,12 @@
         <activity android:name=".SelectPackage6Activity"/>
         <activity android:name=".CompleteActivity"/>
         <activity android:name=".BookingDetailsActivity"/>
+        <activity android:name=".FullscreenActivity"/>
+        <activity android:name=".FullscreenActivity2"/>
+        <activity android:name=".FullscreenActivity3"/>
+        <activity android:name=".FullscreenActivity4"/>
+        <activity android:name=".FullscreenActivity5"/>
+        <activity android:name=".FullscreenActivity6"/>
 
     </application>
 

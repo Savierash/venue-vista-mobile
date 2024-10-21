@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.app.AlertDialog;
 import android.widget.Toast;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
@@ -35,7 +34,7 @@ public class BookingDetailsActivity extends AppCompatActivity {
     private LinearLayout layoutPriceCalculation;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_details);
 
@@ -76,29 +75,6 @@ public class BookingDetailsActivity extends AppCompatActivity {
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
 
 
-
-        // TextWatcher for additional details
-        etDetails.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // No action needed
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // Check if the input is empty
-                if (s.toString().trim().isEmpty()) {
-                    tvNoChoices.setVisibility(View.VISIBLE); // Show the message
-                } else {
-                    tvNoChoices.setVisibility(View.GONE); // Hide the message
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                // No action needed
-            }
-        });
 
         // Handle booking confirmation
         btnConfirm.setOnClickListener(v -> {

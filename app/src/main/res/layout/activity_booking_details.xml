@@ -34,24 +34,20 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Choose birthday"
+        android:hint="Select Event Type"
         app:hintTextColor="@color/black"
-        app:boxStrokeColor="@color/black">
+        android:layout_margin="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etEventType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
-        android:textColor="@color/black"
-        android:background="@drawable/white_rounded_corner"
-        android:padding="16dp"
-        android:drawableEnd="@drawable/baseline_expand_more_24"
-        android:importantForAccessibility="yes" />
-</com.google.android.material.textfield.TextInputLayout>
-
-
+        <AutoCompleteTextView
+            android:id="@+id/etEventType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:inputType="none"
+            android:padding="16dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <!-- Venue Selection -->
@@ -68,21 +64,19 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Choose Venue"
+        android:hint="Select Venue Type"
         app:hintTextColor="@color/black"
-        app:boxStrokeColor="@color/black">
+        android:layout_margin="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/etVenue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner"
-            android:padding="16dp"
-            android:drawableEnd="@drawable/baseline_expand_more_24"
-            android:importantForAccessibility="yes" />
+            android:background="@color/white"
+            android:inputType="none"
+            android:padding="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Customization -->
@@ -108,7 +102,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Additional Details -->
@@ -134,18 +128,8 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tvNoChoices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No choices if none to add"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:visibility="gone"
-        android:layout_marginTop="8dp" />
 
     <!-- Date Selection -->
     <TextView
@@ -161,7 +145,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter event date"
+        android:hint="mm/dd/yy"
         app:hintTextColor="@color/black">
 
         <!-- Date Selection -->
@@ -181,7 +165,7 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -198,7 +182,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Button Layout for Calculate and Confirm -->
@@ -210,16 +194,16 @@
             android:text="Calculate Price"
             android:textColor="@android:color/white"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="10dp"/>
 
-    <Button
-        android:id="@+id/btnConfirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/lighterblue"
-        android:text="Confirm"
-        android:textColor="@android:color/white" />
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/lighterblue"
+            android:text="Confirm"
+            android:textColor="@android:color/white" />
 
 
 

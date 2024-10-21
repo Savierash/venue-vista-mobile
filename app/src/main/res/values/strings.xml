@@ -9,12 +9,12 @@
         <item>Conference</item>
     </string-array>
 
-    <string-array name="Venue_types">
-        <item>Birthday</item>
-        <item>Wedding</item>
-        <item>Anniversary</item>
-        <item>Meeting</item>
-        <item>Conference</item>
+    <string-array name="venue_types">
+        <item>Pavilion</item>
+        <item>Cottage</item>
+        <item>Poolside</item>
+        <item>Garden</item>
+        <item>Center</item>
     </string-array>
 
 </resources>

@@ -12,7 +12,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.app.AlertDialog;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
@@ -64,5 +63,15 @@ public class BookingDetailsActivity extends AppCompatActivity {
             }
         });
 
+
+        Button btnConfirm = findViewById(R.id.btnConfirm);
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BookingDetailsActivity.this,CompleteActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

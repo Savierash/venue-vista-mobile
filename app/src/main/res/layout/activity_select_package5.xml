@@ -14,8 +14,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="7dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
 
             <ImageView
                 android:id="@+id/back_button"
@@ -67,8 +67,7 @@
                     android:contentDescription="OUTING"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/farewell_party" />
-
+                    android:src="@drawable/cottage"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

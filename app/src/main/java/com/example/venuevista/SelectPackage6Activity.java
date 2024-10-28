@@ -37,5 +37,14 @@ public class SelectPackage6Activity extends AppCompatActivity {
                 finish();
             }
         });
+
+        ImageView image1 = findViewById(R.id.image1);
+        image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectPackage6Activity.this,FullscreenActivity6.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -1,10 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblue">
+
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/lightblue">
+
 
     <!-- Title -->
     <TextView
@@ -18,30 +24,36 @@
         android:textColor="@color/black"
         android:fontFamily="@font/bree_serif"/>
 
-    <!-- Event Type Selection -->
+
+    <!-- Event type -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Event Type"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:textColor="@color/black"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter event type (ex: Birthday)"
-        app:hintTextColor="@color/black">
+        android:hint="Select Event Type"
+        app:hintTextColor="@color/black"
+        android:layout_margin="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/etEventType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white"
+            android:inputType="none"
+            android:padding="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <!-- Venue Selection -->
     <TextView
@@ -57,16 +69,19 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter venue"
-        app:hintTextColor="@color/black">
+        android:hint="Select Venue Type"
+        app:hintTextColor="@color/black"
+        android:layout_margin="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/etVenue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white"
+            android:inputType="none"
+            android:padding="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Customization -->
@@ -92,7 +107,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Additional Details -->
@@ -118,18 +133,8 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tvNoChoices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No choices if none to add"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:visibility="gone"
-        android:layout_marginTop="8dp" />
 
     <!-- Date Selection -->
     <TextView
@@ -145,8 +150,19 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter event date"
+        android:hint="mm/dd/yy"
         app:hintTextColor="@color/black">
+
+        <!-- Date Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Visitors"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"/>
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etDate"
@@ -154,7 +170,7 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -163,40 +179,37 @@
         android:hint="Enter number of visitors"
         app:hintTextColor="@color/black">
 
+        <!-- Date Selection -->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etVisitors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="date"
             android:textColor="@color/black"
-            android:background="@drawable/white_rounded_corner" />
+            android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Button Layout for Calculate and Confirm -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:gravity="center">
-
         <Button
             android:id="@+id/btnCalculatePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/lighterblue"
             android:text="Calculate Price"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:id="@+id/btnConfirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
             android:backgroundTint="@color/lighterblue"
             android:text="Confirm"
             android:textColor="@android:color/white" />
-    </LinearLayout>
+
+
 
     <!-- Price Calculation -->
     <LinearLayout
@@ -215,5 +228,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
+
     </LinearLayout>
 </LinearLayout>
+</ScrollView>

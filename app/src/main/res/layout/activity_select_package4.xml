@@ -14,8 +14,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="7dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
 
             <ImageView
                 android:id="@+id/back_button"
@@ -61,13 +61,12 @@
                     android:id="@+id/image1"
                     android:layout_width="match_parent"
                     android:layout_height="108dp"
-
                     android:layout_gravity="center"
                     android:clickable="true"
                     android:contentDescription="OUTING"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/anniversaries" />
+                    android:src="@drawable/garden"/>
 
                 <TextView
                     android:layout_width="wrap_content"
